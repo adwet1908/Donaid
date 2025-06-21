@@ -1,0 +1,15 @@
+# Root .gitignore
+
+# Common
+node_modules/
+.env
+.DS_Store
+
+# Frontend (Donaid folder)
+Donaid/node_modules/
+Donaid/.env
+Donaid/build/
+
+# Backend
+backend/node_modules/
+backend/.env
