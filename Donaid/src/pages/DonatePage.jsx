@@ -27,12 +27,12 @@ const DonatePage = () => {
       const res = await axios.post(
         "http://localhost:5001/api/payments/create-order",
         {
-          amount: Number(amount) * 100, // convert to paise
+          amount: Number(amount), // convert to paise
           campaignId,
         }
       );
       console.log(amount);
-      const orderData = res.data;
+      const orderData = res.data.order;
 
       // 2. Setup Razorpay options
       const options = {

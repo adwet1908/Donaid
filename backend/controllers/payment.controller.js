@@ -22,6 +22,7 @@ export const createOrder = async (req, res) => {
     };
 
     const order = await razorpayInstance.orders.create(options);
+    console.log(order);
 
     res.status(200).json({
       success: true,
