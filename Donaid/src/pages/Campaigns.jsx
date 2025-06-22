@@ -9,7 +9,7 @@ const Campaigns = () => {
 
   const fetchCampaign = async () => {
     try {
-      const res = await axios.get("http://localhost:5001/api/campaigns");
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/campaigns`);
       // console.log(res)
       if (res.data.success) {
         setCampaign(res.data.data);

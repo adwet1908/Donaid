@@ -13,7 +13,7 @@ const CampaignPage = () => {
   useEffect(() => {
     const fetchCampaign = async () => {
       try {
-        const res = await axios.get(`http://localhost:5001/api/campaigns/${id}`);
+        const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/campaigns/${id}`);
         if (res.data.success) {
           setCampaignData(res.data.campaign);
         }
